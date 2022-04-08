@@ -1,0 +1,55 @@
+﻿Pomodoro App				16.11.2021
+
+Was soll die Anwendung können?
+
+//	1. Timer setzen (15-25 Minuten)
+//	Man kann angeben, woran man gerade arbeitet in den Notizen
+//	2. Timer läuft ab, bei 0 ploppt Fenster auf und ein Effekt wird abgespielt, man wird motiviert
+//	3. 5 Minuten Entspannungsphase, 
+//	4. Man kann einstellen, ob gerade die Arbeits- oder Entspannungsphase ist
+//	5. Man kann den Timer unterbrechen
+//	6. Alle Notizen werden gespeichert, sodass man sie inklusive Titel und Datum einsehen kann	
+
+
+
+Beheben:
+
+// - Timer zeigt erst 00:00 an, dann kommt die Benachrichtung (Anzeige geht danach nicht unter 0)
+// - Timer startet bei einer Minute, und zählt nicht ins Negative
+// - Knopf Pause starten/Fokussierung starten funktioniert richtig
+// - Zeit hinzufügen funktioniert richtig, Timer zählt von neuer Zeit runter
+// - Sekunden können beim hinzufügen nicht über 60 gehen, stattdessen wird eine Minute hinzugefügt
+// - Zeit kann hinzugefügt werden, bevor der Timer startet
+// - Knöpfe sind statisch, ihre Größe verändert sich nicht mit dem Tab ---> Größe ist statisch
+// - Anwendung kann nicht maximiert werden
+// - Man kann nicht starten wenn die Zeit bei 0 ist
+// - Mondbild wird angezeigt --> bei pbPhase unter Source eingefügt
+// - Sonne und Mond der richtigen Phase zuordnen
+// - Sonne wird bei Start nicht angezeigt
+// - Spalten sind statisch und nicht verschiebbar (CanUserResizeColumns = false)
+// - Titel und Notizsspalte leer, nachdem Eintrag hinzugefügt wurde
+// - Wenn man auf Lesen klickt wird 
+// - schöneres Bild für Mond suchen
+// - datatable passt in box
+// - Wenn Notiz gelöscht wird, dann wird sie beim Lesen einer anderen stattdessen angezeigt (notiz bei dem gewählten index muss gelöscht werden)
+// - wenn man auf löschen drückt ohne spalten stürzt es ab
+
+
+
+Einfügen:
+
+// - Nutzer kann die Anzahl an Minuten und Sekunden einstellen	(Sekunden in 30er Schritten)
+// - wenn man auf das Zeitlabel drückt ändert sich die Farbe
+// - Bild, um anzuzeigen, ob gerade Fokussierungs- oder Entspannungsphase ist (Sonne & Mond)
+// - Knopf- und Schriftfarben ändern sich je nach Phase
+// - man kann Notizen speichern, dataGrid hat Spalten und Reihen
+// - wenn Notiz gespeichert wird steht dessen Datum da
+// - man kann gespeichterte Notizen lesen
+// - und löschen --> datagridNotiz.Items.RemoveAt(currentindex);
+// - Wenn man löschen will muss man dies per Notizbox bestätigen;
+// - mann kann Schließen Knopf drücken, Timerfenster wird angezeigt, Notizfenster verschwindet
+// - man kann bei Textbox Zeilenumbrüche machen
+
+
+
+

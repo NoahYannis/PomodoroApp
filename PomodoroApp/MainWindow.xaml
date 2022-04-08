@@ -1,0 +1,56 @@
+﻿<Window x:Class="PomodoroApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PomodoroApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="txtNotiz" Margin="137,140,437,139" RenderTransformOrigin="0.5,0.5" AcceptsReturn="True" AcceptsTab="True"/>
+        <Button x:Name="btnStart" Content="Start" Margin="155,320,542,59" RenderTransformOrigin="-0.444,0.107" Click="btnStart_Click"/>
+        <Button x:Name="btnStop" Content="Stop" Margin="348,320,348,59" RenderTransformOrigin="-0.444,0.107" Click="btnStop_Click"/>
+        <Button x:Name="btnNeu" Content="Neu" Margin="541,320,155,59" RenderTransformOrigin="-0.444,0.107" Click="btnNeu_Click"/>
+        <Label x:Name="lblTimer" Content="00:00" Margin="206,125,207,173" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" MouseUp="lblFarbwechsel"/>
+        <TextBlock HorizontalAlignment="Left" Margin="351,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run/><LineBreak/><Run/></TextBlock>
+        <Button x:Name="btnMinuten" Content="+  1 Minute " Margin="93,169,599,217" Click="btnMinuten_Click"/>
+        <Button x:Name="btnSekunden" Content="+ 30 Sek" Margin="598,169,94,217" Click="btnSekunden_Click"/>
+        <Button x:Name="btnPhasenwechsel" Content="Pause starten&#xA;" Margin="379,27,265,359" Click="btnPhasenwechsel_Click"/>
+        <Image x:Name="pbPhase" HorizontalAlignment="Left" Height="100" Margin="598,27,0,0" VerticalAlignment="Top" Width="100" />
+        <Button x:Name="btnNotiz" Content="Notiz" Margin="273,29,470,361" Click="btnNotiz_Click"/>
+        <Button x:Name="btnLesen" Content="Lesen" Margin="405,320,291,59" Click="btnLesen_Click"/>
+        <Button x:Name="btnLöschen" Content="Löschen" Margin="147,320,557,59" Click="btnLöschen_Click"/>
+        <Button x:Name="btnSpeichern" Content="Speichern" Margin="273,320,423,59" Click="btnSpeichern_Click"/>
+        <Label x:Name="lblTitel" Content="Titel:" Margin="55,51,663,313" FontSize="20"/>
+        <Label x:Name="lblNotiz" Content="Notiz:" Margin="50,126,653,246" FontSize="20"/>
+        <TextBox x:Name="txtTitel" Margin="137,60,437,320" AcceptsReturn="True" AcceptsTab="True"/>
+        <Button x:Name="btnSchließen" Content="Schließen" Margin="541,320,155,59" Click="btnSchließen_Click"/>
+        <DataGrid x:Name="datagridNotiz" Margin="420,32,50,139" CanUserResizeColumns="False" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeRows="False" HorizontalGridLinesBrush="Black" RowHeaderWidth="0">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Orange"/>
+                    <Setter Property="FontFamily" Value="Comic Sans MS"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="Width" Value="Auto" />
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.177"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.486"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+            <DataGrid.CellStyle>
+                <Style/>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Titel" Binding="{Binding titel}" Width="100" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Notiz" Binding="{Binding notiz}" Width="100" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Datum" Binding="{Binding datum}" Width="*" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

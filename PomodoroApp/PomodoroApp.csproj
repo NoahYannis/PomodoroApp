@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Pomodoro3.png" />
+    <None Remove="PomodoroMondbildPNG.png" />
+    <None Remove="PomodoroSonne.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pomodoro3.png" />
+    <Resource Include="PomodoroMondbildPNG.png" />
+    <Resource Include="PomodoroSonne.png" />
+  </ItemGroup>
+
+</Project>
